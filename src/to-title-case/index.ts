@@ -1,3 +1,7 @@
-const toTitleCase = (string: string): string => string;
+const toTitleCase = () => {
+  const string = String(this);
+
+  return string;
+};
 
 export { toTitleCase as default };

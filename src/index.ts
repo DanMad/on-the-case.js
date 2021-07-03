@@ -4,7 +4,7 @@ import toPascalCase from './to-pascal-case';
 import toSnakeCase from './to-snake-case';
 import toTitleCase from './to-title-case';
 
-const funcs: Record<string, (string: string) => string> = {
+const funcs: Record<string, () => string> = {
   toCamelCase,
   toKebabCase,
   toPascalCase,

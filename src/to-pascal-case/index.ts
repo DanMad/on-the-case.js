@@ -1,3 +1,7 @@
-const toPascalCase = (string: string): string => string;
+const toPascalCase = () => {
+  const string = String(this);
+
+  return string;
+};
 
 export { toPascalCase as default };

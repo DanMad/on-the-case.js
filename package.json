@@ -1,16 +1,30 @@
 {
   "name": "on-the-case.js",
-  "version": "0.1.0",
-  "repository": "https://github.com/DanMad/on-the-case.js.git",
+  "version": "0.0.0-development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanMad/node-sass-token-importer.git"
+  },
   "license": "MIT",
   "author": "DanMad",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc src/*.ts --outfile dist/index.js",
-    "sort-package": "sort-package-json"
+    "build": "rm -rf dist && webpack",
+    "ci": "rm -rf node_modules && yarn install --frozen-lockfile",
+    "sort-package": "sort-package-json",
+    "test": ""
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "jest": "^27.0.6",
+    "semantic-release": "^17.4.4",
     "sort-package-json": "^1.50.0",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2"
   }
 }

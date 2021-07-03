@@ -1,9 +1,9 @@
 function toKebabCase(): string {
-  const string = String(this);
+  const str = String(this);
 
-  return string
+  return str
     .match(/[A-Z]{2,}(?=[A-Z][a-z]+|\b)|[A-Z]?[a-z]+|[A-Z]|[0-9]+/g)
-    .map((subString: string): string => subString.toLowerCase())
+    .map((subStr: string): string => subStr.toLowerCase())
     .join('-');
 }
 

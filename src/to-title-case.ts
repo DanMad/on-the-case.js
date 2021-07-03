@@ -1,3 +1,3 @@
 const toTitleCase = (string: string): string => string;
 
-export {toTitleCase as default };
+export { toTitleCase as default };

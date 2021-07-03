@@ -12,7 +12,7 @@ const funcs: Record<string, (string: string) => string> = {
   toTitleCase,
 }
 
-Object.keys(funcs).map((func) => {
+Object.keys(funcs).map((func: string) => {
   if (`${func}` in String) {
     console.error(
       'Error from onTheCase.js:\n' +

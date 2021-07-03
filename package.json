@@ -1,0 +1,16 @@
+{
+  "name": "on-the-case.js",
+  "version": "0.1.0",
+  "repository": "https://github.com/DanMad/on-the-case.js.git",
+  "license": "MIT",
+  "author": "DanMad",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc src/*.ts --outfile dist/index.js",
+    "sort-package": "sort-package-json"
+  },
+  "devDependencies": {
+    "sort-package-json": "^1.50.0",
+    "typescript": "^4.3.5"
+  }
+}

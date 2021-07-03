@@ -1,6 +1,6 @@
 # OnTheCase.js
 
-_On The Case_ Extends JavaScript's `String` object and includes:
+_On The Case_ Extends JavaScript's native `String` object by including:
 
 - `toCamelCase`
 - `toKebabCase`

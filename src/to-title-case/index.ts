@@ -21,7 +21,7 @@ const lowerCaseWords: string[] = [
 ];
 
 function toTitleCase(): string {
-  let str: string = this.replace(
+  let str: string = String(this).replace(
     /([^\W_]+[^\s-]*) */g,
     (subStr: string) =>
       subStr.charAt(0).toUpperCase() + subStr.substr(1).toLowerCase(),

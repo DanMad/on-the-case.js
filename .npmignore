@@ -1,0 +1,20 @@
+# Git
+.gitignore
+
+# Github workflows
+.github
+
+# Husky
+.husky
+
+# Ignore files
+.*ignore
+
+# Run Command files
+.*rc
+
+# Source directory
+src
+
+# Types
+types

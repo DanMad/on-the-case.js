@@ -18,6 +18,6 @@ Object.keys(funcs).map((func: string) => {
       `On The Case:\n${func} could not be written to JavaScript\'s String object because a function with this name already exists.`,
     );
   } else {
-    String.prototype[func] = func;
+    String.prototype[func] = funcs[func];
   }
 });

@@ -1,12 +1,10 @@
-import onTheCase from './index';
-
 global.String.prototype.toCamelCase = () => 'foo';
 global.String.prototype.toKebabCase = () => 'bar';
 global.String.prototype.toPascalCase = () => 'baz';
 global.String.prototype.toSnakeCase = () => 'qui';
 global.String.prototype.toTitleCase = () => 'thud';
 
-onTheCase();
+import './index';
 
 describe('On The Case', () => {
   it('Respects pre-existing toCamelCase prop on the String object', () => {

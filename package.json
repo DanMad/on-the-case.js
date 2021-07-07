@@ -10,8 +10,6 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && webpack",
-    "ci": "rm -rf node_modules && yarn install --frozen-lockfile",
-    "prepare": "husky install",
     "sort-package": "sort-package-json",
     "test": "jest",
     "test:coverage": "jest --coverage --colors",

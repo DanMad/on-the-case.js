@@ -1,4 +1,4 @@
-name: Release
+name: Release Package
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    name: Release
+    name: Release Package
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout 'main' Branch
@@ -19,16 +19,16 @@ jobs:
         with:
           node-version: 'lts/fermium'
       - name: Remove 'node_modules'
-        run: rm -rf node_modules
+        run: rm -rf node_modules/**
       - name: Install Yarn
         run: npm install --global yarn
       - name: Configure CI
         run: yarn install --frozen-lockfile
-      - name: Run Build
+      - name: Build
         run: yarn build
-      - name: Run Tests
+      - name: Test
         run: yarn test
-      - name: Release Package
+      - name: Publish
         run: yarn run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

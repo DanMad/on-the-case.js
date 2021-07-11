@@ -9,8 +9,7 @@
   "author": "DanMad",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && webpack",
-    "sort-package": "sort-package-json",
+    "build": "rm -rf dist && webpack --env production",
     "test": "jest",
     "test:coverage": "jest --coverage --colors",
     "test:watch": "jest --watch"

@@ -1,5 +1,4 @@
 const path = require('path');
-const babel = require('./babel.config.json');
 
 module.exports = {
   entry: './src/index',
@@ -13,7 +12,7 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: babel.presets,
+              presets: ['@babel/env', '@babel/preset-typescript'],
             },
           },
         ],

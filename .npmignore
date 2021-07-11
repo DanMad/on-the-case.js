@@ -2,14 +2,8 @@
 *.config.*
 .tsconfig.*
 
-# Git
-.gitignore
-
-# Github workflows
-.github
-
-# Husky
-.husky
+# Hidden directories
+.*/**
 
 # Ignore files
 .*ignore
@@ -18,7 +12,7 @@
 .*rc
 
 # Source directory
-src
+src/
 
-# Types
-types
+# Types directory
+types/

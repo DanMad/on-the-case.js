@@ -9,7 +9,7 @@
   "author": "DanMad",
   "main": "dist/index.js",
   "scripts": {
-    "bootstrap": "yarn install && husky install && chmod ug+x .husky/*",
+    "bootstrap": "yarn install && husky install && chmod +x .husky/*",
     "build": "rm -rf dist && webpack --env production",
     "test": "jest",
     "test:coverage": "jest --coverage --colors",

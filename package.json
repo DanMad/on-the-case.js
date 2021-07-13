@@ -10,7 +10,7 @@
   "main": "dist/index.js",
   "scripts": {
     "bootstrap": "yarn install && husky install && chmod +x .husky/*",
-    "build": "rm -rf dist && webpack --env production",
+    "build": "rm -rf dist && webpack",
     "test": "jest",
     "test:coverage": "jest --coverage --colors",
     "test:watch": "jest --watch"
@@ -24,7 +24,7 @@
     "babel-loader": "^8.2.2",
     "husky": "^7.0.1",
     "jest": "^27.0.6",
-    "lint-staged": "^11.0.0",
+    "lint-staged": "^11.0.1",
     "prettier": "^2.3.2",
     "semantic-release": "^17.4.4",
     "sort-package-json": "^1.50.0",

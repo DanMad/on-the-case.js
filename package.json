@@ -4,7 +4,10 @@
   "description": "A module that extends JavaScript's String object with additional case-conversion support",
   "homepage": "https://www.npmjs.com/package/on-the-case",
   "bugs": "https://github.com/DanMad/on-the-case/issues",
-  "repository": "https://github.com/DanMad/on-the-case.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanMad/on-the-case.git"
+  },
   "license": "MIT",
   "author": "DanMad",
   "main": "dist/index.js",

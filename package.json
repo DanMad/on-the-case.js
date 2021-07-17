@@ -14,6 +14,7 @@
   "scripts": {
     "bootstrap": "yarn install && husky install && chmod +x .husky/*",
     "build": "rm -rf dist && webpack",
+    "format": "sort-package-json && prettier --write \"**/*\"",
     "test": "jest",
     "test:coverage": "jest --coverage --colors",
     "test:watch": "jest --watch"

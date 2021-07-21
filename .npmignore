@@ -2,6 +2,9 @@
 *.config.*
 .tsconfig.*
 
+# Coverage directory
+coverage/
+
 # Hidden directories
 .*/**
 

@@ -1,3 +1,6 @@
+# Coverage directory
+coverage/
+
 # Dependencies
 node_modules/
 
@@ -6,7 +9,7 @@ dist/
 
 # Hidden directories
 .*/**
-!.github/**
+!.github/workflows/**
 
 # Ignore files
 .*ignore
@@ -26,3 +29,6 @@ yarn.lock
 
 # Run Command files
 .*rc
+
+# Script files
+*.sh

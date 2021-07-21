@@ -10,7 +10,7 @@ PAYLOAD="{ \
   \"prerelease\": false \
 }"
 GITHUB_ENDPOINT="${GITHUB_API_URL}/repos/${GITHUB_REPOSITORY}/releases"
-GITHUB_ENDPOINT_STATUS=$(curl -H "Content-Type:application/json" $GITHUB_ENDPOINT -d $PAYLOAD -v -sH "Authorization: token ${GITHUB_TOKEN}")
+GITHUB_ENDPOINT_STATUS=$(curl -H "Content-Type:application/json" $GITHUB_ENDPOINT -d $PAYLOAD -v -s -H "Authorization: token ${GITHUB_TOKEN}")
 
 if [ "$GITHUB_ENDPOINT_STATUS" = "200" ]
 then

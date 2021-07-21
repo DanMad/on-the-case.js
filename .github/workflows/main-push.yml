@@ -4,6 +4,7 @@ name: Push (main)
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 on:
   push:
@@ -27,8 +28,6 @@ jobs:
     name: Create NPM Release
     runs-on: ubuntu-latest
     needs: create_github_release
-    env:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
         with:

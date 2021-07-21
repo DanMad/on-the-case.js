@@ -4,6 +4,7 @@ name: Push (main)
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 on:
   push:
@@ -39,6 +40,3 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn publish
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-

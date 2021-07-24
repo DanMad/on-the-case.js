@@ -9,6 +9,7 @@
     }
   },
   "roots": ["<rootDir>/src"],
+  "setupFilesAfterEnv": ["<rootDir>/setup-jest.ts"],
   "testMatch": ["**/*.test.ts"],
   "testPathIgnorePatterns": ["<rootDir>/node_modules/"],
   "verbose": true

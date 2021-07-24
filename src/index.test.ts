@@ -4,9 +4,21 @@ global.String.prototype.toPascalCase = () => 'baz';
 global.String.prototype.toSnakeCase = () => 'qui';
 global.String.prototype.toTitleCase = () => 'thud';
 
-import './index';
-
 describe('On The Case', () => {
+  let spyConsole;
+
+  beforeAll(() => {
+    spyConsole = jest.spyOn(console, 'error').mockImplementation(() => jest.fn);
+  });
+
+  beforeEach(() => {
+    require('./index');
+  });
+
+  afterAll(() => {
+    spyConsole.mockRestore();
+  });
+
   it('Respects pre-existing toCamelCase prop on the String object', () => {
     expect(''.toCamelCase()).toBe('foo');
   });
@@ -25,5 +37,9 @@ describe('On The Case', () => {
 
   it('Respects pre-existing toTitleCase prop on the String object', () => {
     expect(''.toTitleCase()).toBe('thud');
+  });
+
+  it('Throws an error when pre-existing props exist on the String object', () => {
+    expect(spyConsole).toBeCalledTimes(5);
   });
 });

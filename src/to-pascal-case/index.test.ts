@@ -1,18 +1,18 @@
-import toPascalCase from './index';
-
-global.String.prototype.toPascalCase = toPascalCase;
-
 describe('toPascalCase', () => {
+  beforeAll(() => {
+    require('../index');
+  });
+
   it('Supports camel case transformation', () => {
-    expect('fooBarBaz'.toPascalCase()).toBe('FooBarBaz');
+    expect('   fooBarBaz'.toPascalCase()).toBe('   FooBarBaz');
   });
 
   it('Supports kebab case transformation', () => {
-    expect('foo-bar-baz'.toPascalCase()).toBe('FooBarBaz');
+    expect('foo-bar-baz   '.toPascalCase()).toBe('FooBarBaz   ');
   });
 
   it('Supports sentence case transformation', () => {
-    expect('Foo bar  baz'.toPascalCase()).toBe('FooBarBaz');
+    expect('   Foo bar  baz   '.toPascalCase()).toBe('   FooBarBaz   ');
   });
 
   it('Supports snake case transformation', () => {

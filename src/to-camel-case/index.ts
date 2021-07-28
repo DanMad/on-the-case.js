@@ -1,6 +1,8 @@
+import substringRegexp from '../substring-regexp';
+
 function toCamelCase(): string {
   return String(this)
-    .match(/[A-Z]{2,}(?=[A-Z][a-z]+|\b)|[A-Z]?[a-z]+|[A-Z]|[0-9]+/g)
+    .match(substringRegexp)
     .map((subStr: string, i: number): string =>
       i === 0
         ? subStr.toLowerCase()

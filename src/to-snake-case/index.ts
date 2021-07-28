@@ -1,6 +1,8 @@
+import substringRegexp from '../substring-regexp';
+
 function toSnakeCase(): string {
   return String(this)
-    .match(/[A-Z]{2,}(?=[A-Z][a-z]+|\b)|[A-Z]?[a-z]+|[A-Z]|[0-9]+/g)
+    .match(substringRegexp)
     .map((subStr: string): string => subStr.toLowerCase())
     .join('_');
 }

@@ -1,18 +1,18 @@
-import toKebabCase from './index';
-
-global.String.prototype.toKebabCase = toKebabCase;
-
 describe('toKebabCase', () => {
+  beforeAll(() => {
+    require('../index');
+  });
+
   it('Supports camel case transformation', () => {
-    expect('fooBarBaz'.toKebabCase()).toBe('foo-bar-baz');
+    expect('   fooBarBaz'.toKebabCase()).toBe('   foo-bar-baz');
   });
 
   it('Supports pascal case transformation', () => {
-    expect('FooBarBaz'.toKebabCase()).toBe('foo-bar-baz');
+    expect('FooBarBaz   '.toKebabCase()).toBe('foo-bar-baz   ');
   });
 
   it('Supports sentence case transformation', () => {
-    expect('Foo bar  baz'.toKebabCase()).toBe('foo-bar-baz');
+    expect('   Foo bar  baz   '.toKebabCase()).toBe('   foo-bar-baz   ');
   });
 
   it('Supports snake case transformation', () => {

@@ -1,8 +1,8 @@
-import toSnakeCase from './index';
-
-global.String.prototype.toSnakeCase = toSnakeCase;
-
 describe('toSnakeCase', () => {
+  beforeAll(() => {
+    require('../index');
+  });
+
   it('Supports camel case transformation', () => {
     expect('   fooBarBaz'.toSnakeCase()).toBe('   foo_bar_baz');
   });

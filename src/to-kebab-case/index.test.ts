@@ -1,8 +1,8 @@
-import toKebabCase from './index';
-
-global.String.prototype.toKebabCase = toKebabCase;
-
 describe('toKebabCase', () => {
+  beforeAll(() => {
+    require('../index');
+  });
+
   it('Supports camel case transformation', () => {
     expect('   fooBarBaz'.toKebabCase()).toBe('   foo-bar-baz');
   });

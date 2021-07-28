@@ -1,8 +1,8 @@
-import toPascalCase from './index';
-
-global.String.prototype.toPascalCase = toPascalCase;
-
 describe('toPascalCase', () => {
+  beforeAll(() => {
+    require('../index');
+  });
+
   it('Supports camel case transformation', () => {
     expect('   fooBarBaz'.toPascalCase()).toBe('   FooBarBaz');
   });

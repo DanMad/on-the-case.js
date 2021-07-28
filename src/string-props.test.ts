@@ -4,8 +4,8 @@ global.String.prototype.toPascalCase = () => 'baz';
 global.String.prototype.toSnakeCase = () => 'qui';
 global.String.prototype.toTitleCase = () => 'thud';
 
-describe('On The Case', () => {
-  let spyConsole;
+describe('When String props do exist.', () => {
+  let spyConsole: jest.SpyInstance;
 
   beforeAll(() => {
     spyConsole = jest.spyOn(console, 'error').mockImplementation(() => jest.fn);
@@ -19,23 +19,23 @@ describe('On The Case', () => {
     spyConsole.mockRestore();
   });
 
-  it('Respects pre-existing toCamelCase prop on the String object', () => {
+  it("toCamelCase isn't added to JavaScript's String object", () => {
     expect(''.toCamelCase()).toBe('foo');
   });
 
-  it('Respects pre-existing toKebabCase prop on the String object', () => {
+  it("toKebabCase isn't added to JavaScript's String object", () => {
     expect(''.toKebabCase()).toBe('bar');
   });
 
-  it('Respects pre-existing toPascalCase prop on the String object', () => {
+  it("toPascalCase isn't added to JavaScript's String object", () => {
     expect(''.toPascalCase()).toBe('baz');
   });
 
-  it('Respects pre-existing toSnakeCase prop on the String object', () => {
+  it("toSnakeCase isn't added to JavaScript's String object", () => {
     expect(''.toSnakeCase()).toBe('qui');
   });
 
-  it('Respects pre-existing toTitleCase prop on the String object', () => {
+  it("toTitleCase isn't added to JavaScript's String object", () => {
     expect(''.toTitleCase()).toBe('thud');
   });
 

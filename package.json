@@ -13,11 +13,11 @@
   "main": "dist/index.js",
   "scripts": {
     "bootstrap": "rm -rf node_modules && yarn install && husky install && chmod +x .husky/*",
+    "bootstrap-frozen": "rm -rf node_modules && yarn install --frozen-lockfile && husky install && chmod +x .husky/*",
     "build": "rm -rf dist && webpack",
     "format": "sort-package-json && prettier --write \"**/*\"",
     "test": "jest",
-    "test:coverage": "jest --coverage --colors",
-    "test:watch": "jest --watch"
+    "test-coverage": "jest --coverage --colors"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",

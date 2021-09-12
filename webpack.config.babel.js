@@ -1,6 +1,6 @@
 import path from 'path';
 
-export default {
+const webpackConfig = {
   entry: './src/index',
   mode: 'production',
   module: {
@@ -27,3 +27,5 @@ export default {
     extensions: ['.ts'],
   },
 };
+
+export { webpackConfig as default };

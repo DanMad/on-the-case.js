@@ -3,6 +3,10 @@ describe('toKebabCase', () => {
     require('../index');
   });
 
+  it('Supports empty strings', () => {
+    expect(''.toKebabCase()).toBe('');
+  });
+
   it('Supports camel case transformation', () => {
     expect('   fooBarBaz'.toKebabCase()).toBe('   foo-bar-baz');
   });

@@ -1,6 +1,10 @@
 import substringRegexp from '../substring-regexp';
 
 function toCamelCase(): string {
+  if (!String(this).length) {
+    return '';
+  }
+
   return String(this)
     .match(substringRegexp)
     .map((subStr: string, i: number): string =>

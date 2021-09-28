@@ -3,6 +3,10 @@ describe('toPascalCase', () => {
     require('../index');
   });
 
+  it('Supports empty strings', () => {
+    expect(''.toPascalCase()).toBe('');
+  });
+
   it('Supports camel case transformation', () => {
     expect('   fooBarBaz'.toPascalCase()).toBe('   FooBarBaz');
   });

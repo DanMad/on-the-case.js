@@ -8,9 +8,13 @@ _On The Case_ Extends JavaScript's native `String` object by adding the followin
 - `toSnakeCase`
 - `toTitleCase`
 
-## Intstallation
+## Getting started
 
-To install this repo, clone it on your local machine and run `yarn bootstrap` from its root directory.
+To get started, clone this repo on your local machine and run the following command from its root directory:
+
+```
+$ yarn bootstrap
+```
 
 ## Issues
 

@@ -1,7 +1,7 @@
 import CopyPlugin from 'copy-webpack-plugin';
 import path from 'path';
 
-const webpackConfig = {
+const config = {
   entry: './src/index',
   mode: 'production',
   module: {
@@ -34,4 +34,4 @@ const webpackConfig = {
   },
 };
 
-export { webpackConfig as default };
+export { config as default };

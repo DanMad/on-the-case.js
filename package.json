@@ -11,6 +11,7 @@
   "license": "MIT",
   "author": "DanMad",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "bootstrap": "rm -rf node_modules && yarn install && husky install && chmod +x .husky/*",
     "bootstrap-frozen": "rm -rf node_modules && yarn install --frozen-lockfile && husky install && chmod +x .husky/*",
@@ -19,13 +20,13 @@
     "test": "jest",
     "test-coverage": "jest --coverage --colors"
   },
-  "types": "./dist/index.d.ts",
   "devDependencies": {
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-typescript": "^7.15.0",
     "@babel/register": "^7.15.3",
+    "@types/copy-webpack-plugin": "^8.0.1",
     "@types/jest": "^27.0.2",
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.1",

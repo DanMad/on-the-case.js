@@ -1,18 +1,11 @@
 # Config files
 *.config.*
-.tsconfig.*
 
 # Coverage directory
 coverage/
 
-# Hidden directories
-.*/**
-
-# Ignore files
-.*ignore
-
-# Run Command files
-.*rc
+# Hidden files and directories
+.*
 
 # Source directory
 src/

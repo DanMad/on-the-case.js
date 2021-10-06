@@ -8,22 +8,24 @@ describe('toSnakeCase', () => {
   });
 
   it('Supports camel case transformation', () => {
-    expect('   fooBarBaz'.toSnakeCase()).toBe('   foo_bar_baz');
+    expect('  fooBarBaz '.toSnakeCase()).toBe('  foo_bar_baz ');
   });
 
   it('Supports kebab case transformation', () => {
-    expect('foo-bar-baz   '.toSnakeCase()).toBe('foo_bar_baz   ');
+    expect('$ baz-qux-123-  '.toSnakeCase()).toBe(' baz_qux_123  ');
   });
 
   it('Supports pascal case transformation', () => {
-    expect('   FooBarBaz   '.toSnakeCase()).toBe('   foo_bar_baz   ');
+    expect('Thud456Corgy'.toSnakeCase()).toBe('thud_456_corgy');
   });
 
   it('Supports sentence case transformation', () => {
-    expect('Foo bar  baz'.toSnakeCase()).toBe('foo_bar_baz');
+    expect('Corgy % qui  qux'.toSnakeCase()).toBe('corgy_qui_qux');
   });
 
   it('Supports title case transformation', () => {
-    expect('Foo Bar Baz'.toSnakeCase()).toBe('foo_bar_baz');
+    expect('12,345 Corgies Thudding Foo.'.toSnakeCase()).toBe(
+      '12_345_corgies_thudding_foo',
+    );
   });
 });

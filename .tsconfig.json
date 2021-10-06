@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "esModuleInterop": true,
     "module": "ES6",
+    "paths": {
+      "*": ["types/*.d.ts"]
+    },
     "sourceMap": true,
     "strict": true,
     "target": "es2015"
-  },
-  "exclude": ["dist", "node_modules"]
+  }
 }

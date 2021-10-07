@@ -4,7 +4,7 @@
 # Coverage directory
 coverage/
 
-# Hidden files and directories
+# Hidden directories and files
 .*
 
 # Source directory

@@ -9,16 +9,14 @@
     "url": "https://github.com/DanMad/on-the-case.git"
   },
   "license": "MIT",
-  "author": "DanMad",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "author": "DanMad <hooky.mounted_0n@icloud.com>",
+  "types": "index.d.ts",
   "scripts": {
-    "bootstrap": "rm -rf node_modules && yarn install && husky install && chmod +x .husky/*",
-    "bootstrap-frozen": "rm -rf node_modules && yarn install --frozen-lockfile && husky install && chmod +x .husky/*",
-    "build": "rm -rf dist && webpack",
-    "format": "sort-package-json && prettier --write \"**/*\"",
+    "bootstrap": "yarn install",
+    "postbootstrap": "husky install && chmod +x .husky/*",
+    "build": "webpack",
     "test": "jest",
-    "test-coverage": "jest --coverage --colors"
+    "unstrap": "rm -rf dist node_modules yarn-error.log"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.6",

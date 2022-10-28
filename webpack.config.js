@@ -25,6 +25,7 @@ module.exports = {
   },
   output: {
     clean: true,
+    filename: 'index.js',
     path: path.join(__dirname, 'dist'),
   },
   plugins: [

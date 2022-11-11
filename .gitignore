@@ -1,11 +1,5 @@
-# Coverage directory
-coverage/
-
-# Dependencies
-node_modules/
-
-# Distribution directory
-dist/
+# Build files
+dist
 
 # Log files
 *.log
@@ -13,3 +7,9 @@ dist/
 # Operating System
 .DS_Store
 Thumbs.db
+
+# Packages
+node_modules
+
+# Test files
+coverage

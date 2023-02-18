@@ -1,8 +1,7 @@
 const CopyPlugin = require('copy-webpack-plugin');
-const path = require('path');
 
 module.exports = {
-  entry: path.join(__dirname, 'src'),
+  entry: 'src',
   mode: 'production',
   module: {
     rules: [
@@ -13,10 +12,7 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: [
-                '@babel/preset-env',
-                '@babel/preset-typescript'
-              ],
+              presets: ['@babel/preset-env', '@babel/preset-typescript'],
             },
           },
         ],
@@ -26,22 +22,23 @@ module.exports = {
   output: {
     clean: true,
     filename: 'index.js',
-    path: path.join(__dirname, 'dist'),
   },
   plugins: [
     new CopyPlugin({
       patterns: [
         {
-          from: path.join(__dirname, './types/index.d.ts'),
-          to: '.',
+          from: 'types/index.d.ts',
+          to: 'index.d.ts',
         },
-        path.join(__dirname, 'LICENSE'),
-        path.join(__dirname, 'package.json'),
-        path.join(__dirname, 'README.md'),
+        'LICENSE',
+        'package.json',
+        'README.md',
       ],
     }),
   ],
   resolve: {
     extensions: ['.ts'],
+    modules: ['node_modules'],
+    preferRelative: true,
   },
 };

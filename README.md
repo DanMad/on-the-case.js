@@ -21,7 +21,7 @@ yarn add on-the-case
 Alternatively, _onTheCase.js_ can be added to your project via CDN.
 
 ```html
-<script href="https://unpkg.com/on-the-case/index.js"/></script>
+<script href="https://unpkg.com/on-the-case/index.js"></script>
 ```
 
 ## Usage

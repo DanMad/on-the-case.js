@@ -1,6 +1,6 @@
 # onTheCase.js
 
-_onTheCase.js_ extends JavaScript's native `String` object, including additional
+Extends JavaScript's native `String` object, including additional
 case conversion methods.
 
 ## Table of Contents
@@ -106,7 +106,7 @@ case.
 ## Issues
 
 If you encounter any bugs, please
-post an issue](https://github.com/DanMad/on-the-case/issues/new).
+[post an issue](https://github.com/DanMad/on-the-case/issues/new).
 
 ## Contributing
 

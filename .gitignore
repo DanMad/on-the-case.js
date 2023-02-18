@@ -1,15 +1,15 @@
-# Coverage directory
-coverage/
+# Bundle
+dist
 
-# Dependencies
-node_modules/
-
-# Distribution directory
-dist/
-
-# Log files
+# Logs
 *.log
 
 # Operating System
 .DS_Store
 Thumbs.db
+
+# Packages
+node_modules
+
+# Tests
+coverage

@@ -1,12 +1,19 @@
 {
   "name": "on-the-case",
-  "version": "2.1.1",
-  "description": "A module that extends JavaScript's String object with additional case-conversion support",
-  "homepage": "https://www.npmjs.com/package/on-the-case",
+  "version": "2.1.2",
+  "description": "Extends JavaScript's native `String` object, including additional case conversion methods",
+  "homepage": "https://github.com/danmad/on-the-case#readme",
   "bugs": "https://github.com/danmad/on-the-case/issues",
-  "repository": "https://github.com/danmad/on-the-case.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danmad/on-the-case.git"
+  },
   "license": "MIT",
-  "author": "DanMad <hooky.mounted_0n@icloud.com>",
+  "author": {
+    "name": "Daniel Maddison",
+    "email": "hello@danielmaddison.io",
+    "url": "https://www.danielmaddison.io"
+  },
   "types": "index.d.ts",
   "scripts": {
     "bootstrap": "yarn install",

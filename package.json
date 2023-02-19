@@ -1,6 +1,6 @@
 {
   "name": "on-the-case",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Extends JavaScript's native `String` object, including additional case conversion methods",
   "homepage": "https://github.com/danmad/on-the-case#readme",
   "bugs": "https://github.com/danmad/on-the-case/issues",
